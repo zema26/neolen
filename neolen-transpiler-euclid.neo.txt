@@ -1,0 +1,26 @@
+<module> Euclidean
+
+  <fun> int Euclid(int a, int b)
+
+    <while> b != 0
+      <if> a > b
+        a : a - b
+      <else>
+        b : b - a
+      </else>
+    </if>
+  </while>
+
+  <return> a </return>
+
+  </fun>
+
+  <fun> int main(string args[])
+
+    int a, b
+
+    Euclid(in -> a, b) -> out
+
+  </fun>
+
+</module>

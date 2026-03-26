@@ -1,0 +1,55 @@
+<module> primes
+
+  <fun> int Eratosthenes(int n)
+
+    bool primes[n]
+    int l(0), i(0), index_square(3)
+    int first, last, factor
+
+    <for> int k(0)++ < n
+      primes[k] : true
+    </for>
+
+    <while> index_square < n
+      <if> primes[i]
+
+        first : 0 + index_square
+        last : 0 + n
+        factor : i + i + 3
+        primes[first] : false
+
+        <while> last - first > factor
+          first : first + factor
+          primes[first] : false
+        </while>
+
+      </if>
+      i : i + 1
+      index_square : 2 * i * (i + 3) + 3
+    </while>
+
+    '2 ' -> out
+    <for> i(0)++ < n
+      <if> primes[i]
+        <if> 2 * i + 3 > n
+          break
+        </if>
+        ' ' 2 * i + 3 -> out
+        l : l + 1
+        <if> l % 10 == 0
+          '\n' -> out
+        </if>
+      </if>
+    </for>
+
+    '\nnumber : ' l -> out
+
+  </fun>
+
+  <fun> int main
+
+    1000 : Eratosthenes
+
+  </fun>
+
+</module>
