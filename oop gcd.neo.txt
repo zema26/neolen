@@ -1,0 +1,31 @@
+<module> Euclidean
+
+    <class> GCD
+
+        int a, int b
+
+        <fun> int Euclid(int a, int b)
+
+            <while> b!=0
+               <if> a > b
+                   a : a - b
+                <else>
+                   b : b - a
+                </else>
+                </if>
+            </while>
+
+            <return> a </return>
+        </fun>
+    </class>
+
+
+    <fun> int main(string args[])
+
+        GCD N
+
+         N.Euclid(in -> N.a, N.b) -> out
+
+    </fun>
+
+</module>
